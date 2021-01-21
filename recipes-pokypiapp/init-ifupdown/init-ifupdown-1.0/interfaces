@@ -1,0 +1,12 @@
+# /etc/network/interfaces -- configuration file for ifup(8), ifdown(8)
+# see https://community.nxp.com/t5/i-MX-Processors/Yocto-Setting-the-Default-Ethernet-address-and-disable-DHCP-on/m-p/349898
+
+# loopback interface
+auto lo
+iface lo inet loopback
+
+# wired interfaces
+auto eth0
+iface eth0 inet static
+address 192.168.100.101
+netmask 255.255.255.0
